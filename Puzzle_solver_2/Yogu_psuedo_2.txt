@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+    
+    int i,j,x,y,z,xc,yc,zc;
+    int d1[]={1, 2, 1, 3, 7, 6, 2, 9, 8, 1, 5, 4};
+    int d2[]={3,10,8,11,14,15};
+int main() 
+{
+    
+    qqq();
+    return 0;
+}
+
+void qqq()
+{
+    
+    for(i=0;i<13;i++)
+    {
+        if(d1[i]!=100)
+        {
+        	x=d2[1]-d1[i];
+        	y=d2[3]-d1[i];
+        	z=d2[5]-d1[i];
+        	for(j=(i+1);j<13;j++)
+        	{
+         	   if(d1[i]!=100)
+         	   {
+            		    if((x==d1[j])&&(xc==0))
+            		    {
+            		        printf("%d=%d+%d\n",d2[1],d1[i],d1[j]);
+            		        xc=j;
+            	 	        d1[j]=100;
+            	  	        d1[i]=100;
+              	 	    }
+                
+              		    if((y==d1[j])&&(yc==0))
+             	   	    {
+              	      		printf("%d=%d+%d\n",d2[3],d1[i],d1[j]);
+                    		yc=j;
+                    		d1[j]=100;
+                   	        d1[i]=100;
+               		    }
+                
+              		    if((z==d1[j])&&(zc==0))
+               		    {
+                  		printf("%d=%d+%d\n",d2[5],d1[i],d1[j]);
+                    		zc=j;
+                    		d1[j]=100;
+                    		d1[i]=100;
+                	    }
+            	   }
+        	}
+        }
+        
+    }
+    
+}

@@ -1,0 +1,97 @@
+#include <stdio.h>
+int i,j,k,l,m,n,o,p;
+int main()
+{
+    int x[8]={0,0,0,0,0,0,0,0};
+    int a =20;
+    int b[]={1,1,2,3,3,6,2,2};
+    for(i=0;i<6;i++)
+    {
+        x[0]=a-b[i];
+        for(j=(i+1);(j<8);j++)
+        {
+            
+           x[1]=x[0]-b[j];
+           for(k=(j+1);k<8;k++)
+           {
+               if(b[k]==x[1])
+               {
+                    printf("%d=%d+%d+%d\n",a,b[i],b[j],x[1]);
+                    return;
+               }
+               else
+               {
+                   x[2]=x[1]-b[k];
+                    for(l=(k+1);l<8;l++)
+                    {
+                        if(b[l]==x[2])
+                        {
+                            printf("%d=%d+%d+%d+%d\n",a,b[i],b[j],b[k],x[2]);
+                             return;
+                        }
+                        else
+                        {
+                            x[3]=x[2]-b[l];
+                            for(m=(l+1);m<8;m++)
+                            {
+                                if(b[m]==x[3])
+                                {
+                                    printf("%d=%d+%d+%d+%d+%d\n",a,b[i],b[j],b[k],b[l],x[3]);
+                                    return;
+                                }
+                                else
+                                {
+                                    x[4]=x[3]-b[m];
+                                    for(n=(m+1);n<8;n++)
+                                    {
+                                        if(b[n]==x[4])
+                                        {
+                                            printf("%d=%d+%d+%d+%d+%d+%d\n",a,b[i],b[j],b[k],b[l],b[m],x[4]);
+                                            return;
+                                        }
+                                        else
+                                        {
+                                            x[5]=x[4]-b[n];
+                                            for(o=(n+1);o<8;o++)
+                                            {
+                                                if(b[o]==x[5])
+                                                {
+                                                    printf("%d=%d+%d+%d+%d+%d+%d+%d\n",a,b[i],b[j],b[k],b[l],b[m],b[n],x[5]);
+                                                    return;
+                                                }
+                                                else
+                                                {
+                                                    x[6]=x[5]-b[o];
+                                                    for(p=(o+1);p<8;p++)
+                                                    {
+                                                        if(b[p]==x[6])
+                                                        {
+                                                            printf("%d=%d+%d+%d+%d+%d+%d+%d+%d\n",a,b[i],b[j],b[k],b[l],b[m],b[n],b[o],x[6]);
+                                                            return;
+                                                        }
+                                                
+               
+                                                    }
+                                                }
+                                                
+               
+                                            }
+                                        }
+               
+                                    }
+                                }
+               
+                            }
+                        }
+               
+                    }
+               }
+           }
+           
+            
+        }
+        
+    }
+
+    return 0;
+}
